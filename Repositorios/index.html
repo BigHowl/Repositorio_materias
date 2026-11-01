@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acervo da Turma</title>
+  <meta name="description" content="Provas, listas, resumos e materiais de monitoria organizados por disciplina.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a class="marca" href="#inicio">Acervo <span>da turma</span></a>
+    <nav aria-label="Navegação principal">
+      <a href="#acervo">Acervo</a>
+      <a href="#monitoria">Monitoria de Biofísica</a>
+      <a href="#contribuir">Contribuir</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="hero">
+      <div class="conteudo">
+        <p class="selo">Materiais organizados por todos, para todos</p>
+        <h1>Tudo o que você precisa de cada disciplina, em um só lugar.</h1>
+        <p class="lead">
+          Provas antigas, listas, resumos e materiais de monitoria.
+          Busque pela disciplina e pare de caçar arquivo no grupo.
+        </p>
+        <div class="acoes">
+          <a class="botao" href="#acervo">Explorar o acervo</a>
+          <a class="botao secundario" href="#contribuir">Quero contribuir</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACERVO -->
+    <section id="acervo" class="secao">
+      <h2>Acervo</h2>
+      <p class="intro">Use a busca ou filtre por disciplina e tipo de material.</p>
+
+      <div class="filtros">
+        <label class="campo campo-busca">
+          <span>Buscar</span>
+          <input id="busca" type="search" placeholder="Ex.: difusão, P1, Prof. Fulano">
+        </label>
+        <label class="campo">
+          <span>Disciplina</span>
+          <select id="filtro-disciplina">
+            <option value="">Todas</option>
+          </select>
+        </label>
+        <label class="campo">
+          <span>Tipo</span>
+          <select id="filtro-tipo">
+            <option value="">Todos</option>
+          </select>
+        </label>
+      </div>
+
+      <p id="contagem" class="contagem" aria-live="polite"></p>
+      <div id="lista" class="grade"></div>
+    </section>
+
+    <!-- MONITORIA -->
+    <section id="monitoria" class="secao secao-destaque">
+      <h2>Monitoria de Biofísica</h2>
+      <p class="intro">
+        Materiais complementares sobre conceitos que a disciplina deveria cobrir
+        e costuma deixar de fora. Os módulos abaixo são provisórios: edite os
+        títulos e descrições no <code>index.html</code>.
+      </p>
+
+      <div class="grade">
+        <article class="card">
+          <div class="card-topo"><span class="tag" data-tipo="roteiro">Módulo 1</span></div>
+          <h3>Título do módulo</h3>
+          <p>Descreva em uma ou duas frases o conceito e por que ele importa para a biologia.</p>
+          <span class="botao desativado">Em construção</span>
+        </article>
+        <article class="card">
+          <div class="card-topo"><span class="tag" data-tipo="roteiro">Módulo 2</span></div>
+          <h3>Título do módulo</h3>
+          <p>Descreva em uma ou duas frases o conceito e por que ele importa para a biologia.</p>
+          <span class="botao desativado">Em construção</span>
+        </article>
+        <article class="card">
+          <div class="card-topo"><span class="tag" data-tipo="roteiro">Módulo 3</span></div>
+          <h3>Título do módulo</h3>
+          <p>Descreva em uma ou duas frases o conceito e por que ele importa para a biologia.</p>
+          <span class="botao desativado">Em construção</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTRIBUIR -->
+    <section id="contribuir" class="secao">
+      <h2>Como contribuir</h2>
+      <ol class="passos">
+        <li>
+          <strong>Separe o material.</strong>
+          Prefira PDF, com o nome no padrão <code>DISC_TIPO_ANO-SEM_Prof.pdf</code>
+          (ex.: <code>FIS1_P1_2025-1_Fulano.pdf</code>).
+        </li>
+        <li>
+          <strong>Envie pelo formulário.</strong>
+          Troque este texto pelo link do seu formulário assim que criá-lo.
+        </li>
+        <li>
+          <strong>Aguarde a revisão.</strong>
+          Os responsáveis conferem o arquivo e o publicam aqui.
+        </li>
+      </ol>
+      <p class="aviso">
+        Antes de enviar, retire dados pessoais (nome, matrícula, notas) e evite
+        livros e materiais de terceiros protegidos por direito autoral.
+      </p>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="secao">
+      <h2>Sobre</h2>
+      <p>
+        Este acervo nasceu para reunir em um só lugar o que hoje fica espalhado
+        nos Drives de cada aluno. A ideia é simples: quem tem, compartilha; quem
+        precisa, encontra.
+      </p>
+      <p>Mantido por estudantes. Sugestões e correções são sempre bem-vindas.</p>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Acervo da turma · feito por estudantes, para estudantes</p>
+  </footer>
+
+  <script src="materiais.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
